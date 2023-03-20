@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap");
+
+main {
+  --clr-neutral-900: white;
+  --clr-neutral-300: hsl(215, 32%, 27%);
+  --clr-neutral-200: hsl(216, 50%, 17%);
+  --clr-neutral-100: hsl(217, 54%, 11%);
+
+  --clr-primary-400: hsl(215, 51%, 70%);
+  --clr-primary-800: hsl(178, 100%, 50%);
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(215, 51%, 70%);
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+hr {
+  color: hsl(215, 32%, 27%);
+}
+
+/* CARD  */
+.card {
+  max-width: 20rem;
+  background-color: hsl(216, 50%, 17%);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-block: 5rem;
+}
+
+.card__image {
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.card__image-container {
+  position: relative;
+  flex: 2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card__image-eye {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.card__image-container:hover .card__image-cover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsla(178, 100%, 50%, 0.5);
+}
+
+.card__image-container:hover .card__image-eye {
+  display: block;
+  margin: auto;
+  z-index: 100;
+}
+
+.card__text {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card__title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card__title:hover {
+  color: var(--clr-primary-800);
+}
+
+.card__buy-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.card__buy-options img {
+  padding-inline: 5px;
+}
+
+.current-price {
+  color: hsl(178, 100%, 50%);
+  display: inline-block;
+}
+
+.days-left {
+  display: inline-block;
+}
+
+.accreditation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.creator-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: #fff 1px solid;
+}
+
+.creator-name {
+  color: white;
+  cursor: pointer;
+}
+
+.creator-name:hover {
+  color: var(--clr-primary-800);
+}
